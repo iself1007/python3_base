@@ -1,1 +1,26 @@
+/*
+vitualenv:
+创建一个虚拟的python环境，某个项目专属的环境。
+*/
+1、安装
+pip install virtualenv
 
+2、查看安装版本号
+virtualenv --version
+
+3、为某个工程创建一个虚拟环境
+cd xxx_proc
+virtualenv xxx_proc_env
+
+若存在多个版本的python解释器，创建虚拟环境时可以指定具体的python解释器
+vierualenv -p xx/xx/python3.6 xxx_proc_env
+
+若创建一个不带有任何第三方包的纯干净的python环境，需要增加参数参数--no-site-packages。安装到系统Python环境中的所有第三方包都不会复制过来。
+virtualenv --no-site-packages xxx_proc_env
+
+4、激活使用虚拟环境
+cd xxx_proc/xxx_proc_env/Scripts
+activate.bat
+
+5、停止使用
+deactivate.bat
